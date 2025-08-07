@@ -1,0 +1,501 @@
+/* --- Desktop Specific Styles (min-width: 992px) --- */
+@media (min-width: 992px) {
+    body {
+        font-size: 20px;
+        margin: 30px;
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--spacing-xl);
+    }
+
+    /* 1. Header — Travel logo (28px), Menu Icon (menu.svg) */
+    .main-header {
+        padding: var(--spacing-medium) 0;
+    }
+
+    .main-header.container {
+        /* Mobile styles already handle justify-content: space-between and align-items: center */
+    }
+
+    .logo {
+        font-size: 28px; /* As per your specification */
+        font-weight: normal;
+        color: var(--color-brand-primary);
+    }
+
+    .menu-button {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-button img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* 2. Main Title — "Travel around the world" (Gilda Display, 170px), centered */
+    .hero-section {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-large);
+        text-align: center;
+    }
+
+    .hero-title {
+        font-family: var(--font-gilda-display);
+        font-size: 170px; /* As per your specification */
+        line-height: 1;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-large);
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hero-title .hero-brand-word {
+        color: var(--color-brand-primary);
+    }
+
+    .hero-image-wrapper {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50%; /* Adjusted aspect ratio for desktop */
+        border-radius: 30px; /* Slightly larger border-radius for desktop image */
+    }
+
+    .hero-image {
+        object-fit: contain;
+        object-position: center bottom;
+        border-radius: 30px;
+    }
+
+    .hero-image-wrapper::before {
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 90%;
+        background-color: var(--color-accent-orange);
+        border-radius: 50%;
+        filter: blur(40px);
+        opacity: 0.7;
+    }
+
+    /* CARD 2: Destination Introduction and Cards */
+
+    /* 1. & 2. "Find your best destination" and "We have more than 1000+..." */
+    .destination-intro-section {
+        background-color: #fff;
+        padding: var(--spacing-xl) var(--spacing-xl);
+        text-align: center;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        position: relative;
+        z-index: 2;
+        margin-top: -40px; /* More overlap for desktop */
+    }
+
+    .destination-heading {
+        font-family: var(--font-gilda-display);
+        font-size: 72px; /* As per your specification */
+        line-height: 1.2;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-small);
+    }
+
+    .destination-description {
+        font-family: var(--font-urbanist);
+        font-size: 24px; /* As per your specification */
+        font-weight: 500; /* Medium style */
+        color: var(--color-body-text);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* 3. Image Cards (I-VI) - Grouped in 3 columns */
+    .destination-cards-section {
+        padding: var(--spacing-large) 0;
+        background-color: var(--color-light-grey);
+    }
+
+    .destination-cards-section .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: var(--spacing-large);
+        padding: 0 var(--spacing-xl);
+    }
+
+    .destination-card {
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 0;
+        max-width: none;
+    }
+
+    .card-image-wrapper {
+        padding-bottom: 65%; /* Maintain aspect ratio */
+    }
+
+    .card-image {
+        border-radius: 20px; /* Apply border-radius directly to image for consistency */
+    }
+
+    .card-content {
+        padding: var(--spacing-medium);
+    }
+
+    .destination-card .card-title {
+        font-family: var(--font-urbanist);
+        font-size: 24px; /* As per your specification */
+        font-weight: bold;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .destination-card .card-location {
+        gap: 8px;
+    }
+
+    .destination-card .location-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .destination-card .location-text {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 600; /* SemiBold style */
+        color: var(--color-body-text);
+    }
+
+    /* CARD 3: Why Choose Us Section & Feature Cards */
+
+    /* 1. & 2. "Why must choose us" heading and description */
+    .why-choose-us-section {
+        padding: var(--spacing-xl) var(--spacing-xl);
+        text-align: center;
+        margin-top: var(--spacing-large);
+    }
+
+    .why-choose-us-heading {
+        font-family: var(--font-gilda-display);
+        font-size: 70px; /* As per your specification */
+        line-height: 1.2;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-medium);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-choose-us-description {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 500; /* Medium style */
+        color: var(--color-body-text);
+        max-width: 900px;
+        margin: 0 auto var(--spacing-xl);
+    }
+
+    /* 3. Feature Cards (I, II, III) - Grouped together on the same row */
+    .feature-cards-section {
+        padding: var(--spacing-xl) 0;
+        background-color: #fff;
+    }
+
+    .feature-cards-section .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: var(--spacing-medium);
+        padding: 0 var(--spacing-xl);
+    }
+
+    .feature-card {
+        border-radius: 20px;
+        padding: var(--spacing-xl);
+        text-align: left;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        flex: none; /* Override mobile flex properties */
+        min-width: unset;
+        max-width: unset;
+        margin-bottom: 0; /* Remove mobile margin */
+    }
+
+    .feature-card--light-bg {
+        background-color: #fff;
+        border-top: 5px solid var(--color-brand-primary); /* #25A59E at top */
+        padding-top: calc(var(--spacing-xl) - 5px);
+    }
+
+    .feature-card--dark-bg {
+        background-color: var(--color-brand-primary); /* Brand color background */
+        color: #fff;
+    }
+
+    .feature-card--dark-bg .feature-card-title,
+    .feature-card--dark-bg .feature-card-description {
+        color: #fff;
+    }
+
+    .feature-card-title {
+        font-family: var(--font-gilda-display);
+        font-size: 40px; /* As per your specification */
+        line-height: 1.2;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .feature-card-description {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 400; /* Regular style */
+        color: var(--color-body-text);
+        margin-bottom: var(--spacing-large);
+    }
+
+    .more-details-link {
+        justify-content: flex-end; /* Align to the right as per image */
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: var(--spacing-small);
+
+        font-family: var(--font-gilda-display); /* As per your specification */
+        font-size: 18px; /* As per your specification */
+        font-weight: 400; /* Regular style */
+        color: var(--color-brand-primary); /* Default color for light background cards */
+    }
+
+    .more-details-link .arrow-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .feature-card--dark-bg .more-details-link {
+        color: #fff; /* White text for dark background card */
+    }
+
+    .feature-card--dark-bg .more-details-link .arrow-icon {
+        filter: invert(1); /* Invert arrow color to white */
+    }
+
+    .feature-card--light-bg .more-details-link {
+        color: var(--color-brand-primary);
+    }
+    .feature-card--light-bg .more-details-link .arrow-icon {
+        filter: none;
+    }
+
+
+    /* CARD 4: Travel Memorable Section */
+    .travel-memorable-section {
+        padding: var(--spacing-xl) 0;
+        background-color: var(--color-light-grey);
+    }
+
+    .travel-memorable-section .container {
+        display: flex; /* Use Flexbox for side-by-side layout */
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-xl);
+    }
+
+    .travel-memorable-section .text-content {
+        flex: 1;
+        max-width: 55%;
+        text-align: left;
+    }
+
+    .travel-memorable-title {
+        font-family: var(--font-gilda-display);
+        font-size: 70px; /* As per your specification */
+        line-height: 1.2;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-medium);
+        text-align: left;
+    }
+
+    .travel-memorable-title .travel-brand-word {
+        color: var(--color-brand-primary); /* As per your specification */
+    }
+
+    .travel-memorable-description {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 500; /* Medium style */
+        color: var(--color-body-text);
+        margin-bottom: 0;
+        text-align: left;
+        max-width: 600px;
+    }
+
+    .travel-memorable-image-wrapper {
+        flex: 0 0 auto;
+        width: 45%;
+        max-width: 500px;
+        height: auto;
+        margin-left: var(--spacing-xl);
+        margin-right: 0;
+        padding-bottom: 0; /* Remove mobile aspect ratio padding */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Soft shadow for depth */
+    }
+
+    .travel-memorable-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+
+    /* CARD 5: Video Documentation Section */
+    .video-documentation-section {
+        background-color: var(--color-light-grey);
+        padding: var(--spacing-xl) 0;
+        text-align: center;
+    }
+
+    .video-documentation-title {
+        font-family: var(--font-gilda-display);
+        font-size: 72px; /* As per your specification */
+        line-height: 1.2;
+        color: var(--color-heading-dark);
+        margin-bottom: var(--spacing-xl);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-placeholder-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .video-placeholder-image {
+        border-radius: 20px; /* Apply border-radius to the image */
+    }
+
+
+    /* CARD 6: Call to Action Section */
+    .call-to-action-section {
+        background-color: #fff;
+        padding: var(--spacing-xl) 0;
+    }
+
+    .call-to-action-section .container {
+        display: flex; /* Use Flexbox for layout */
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-xl);
+    }
+
+    .cta-title {
+        font-family: var(--font-gilda-display);
+        font-size: 72px; /* As per your specification */
+        line-height: 1.2;
+        margin-bottom: 0;
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    .cta-button {
+        background-color: var(--color-brand-primary); /* #25A59E background color */
+        color: #fff;
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 600; /* SemiBold style */
+        padding: 20px 40px; /* Rectangular padding */
+        border-radius: 10px; /* Slight border-radius */
+    }
+
+    /* CARD 6 (CONTINUED): Footer Section */
+
+    body > hr { /* This targets the hr directly before the footer */
+        border-top: 1px solid rgba(0, 0, 0, 0.1); /* Light grey line */
+        margin: var(--spacing-xl) 0; /* Vertical spacing */
+    }
+
+    .main-footer {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .main-footer .container {
+        display: flex; /* Use Flexbox for overall footer layout */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--spacing-large);
+        padding: 0 var(--spacing-xl);
+        flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    }
+
+    .footer-left-content { /* NEW: Wrapper for logo, tagline, and social icons */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-medium);
+        max-width: 400px;
+    }
+
+    .footer-brand-info {
+        text-align: left; /* Align brand info to the left */
+        margin-bottom: 0;
+    }
+
+    .footer-brand-info .footer-logo {
+        font-family: var(--font-gilda-display);
+        font-size: 28px; /* As per your specification */
+        font-weight: normal;
+        color: var(--color-brand-primary); /* #25A59E text color */
+        margin-bottom: 0;
+    }
+
+    .footer-brand-info .footer-tagline {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* As per your specification */
+        font-weight: 500; /* Medium style */
+        color: var(--color-body-text);
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .footer-social-icons {
+        justify-content: flex-start; /* Align to the left */
+        gap: 15px; /* Space between social icons */
+        margin-bottom: 0; /* Remove mobile margin */
+        margin-top: var(--spacing-small);
+    }
+
+    .footer-social-icons img {
+        width: 30px;
+        height: 30px;
+        filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(150deg); /* Attempt to make them green */
+    }
+
+    .footer-nav {
+        margin-top: 0;
+    }
+
+    .footer-nav ul {
+        flex-direction: row; /* Display menu items in a row */
+        gap: var(--spacing-large); /* Space between navigation links */
+        justify-content: flex-end; /* Push navigation links to the right */
+    }
+
+    .footer-nav li a {
+        font-family: var(--font-urbanist);
+        font-size: 18px; /* Consistent with description text */
+        font-weight: 600; /* SemiBold as per similar elements */
+        color: var(--color-body-text);
+    }
+}
