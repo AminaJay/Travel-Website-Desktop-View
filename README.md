@@ -13,7 +13,7 @@ You can view a live version of this project here:
 
 ## Loom Video Recording
 A video walkthrough and demonstration of the project can be found here:
-[Loom Video](https://your-loom-video-link-here.com)
+[Loom Video](https://www.loom.com/share/e52461ed3a3d4ce7becb9d0052722f54?sid=bf6f241e-0d97-4d2c-bbc6-b24dc53b0b00)
 
 ***
 
